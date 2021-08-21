@@ -6,7 +6,8 @@ mongoose.connect('mongodb+srv://mperkins808:57Bfield57@cluster0.yymy5.mongodb.ne
 const app = express()
 app.use(express.urlencoded({extended:true}))
 app.use(express.static("public"))
-
+//Server url
+//https://quiet-plains-44536.herokuapp.com/
 //MONGOOSE RELATED CODE
 const iServerDBSchema = mongoose.Schema(
     {   _id:Number,
@@ -134,7 +135,7 @@ app.post('/', (req, res) => {
         }
         else{
             console.log('Success')
-            res.sendFile(__dirname + "public/html/index.html")
+            res.sendFile(__dirname + "/public/html/index.html")
             infoCheck = false;
         }
         })
